@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+   <title>Contact</title>
+
+   <!-- Stylesheets -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="../css/style.css">
+   <link rel="stylesheet" href="../css/contact.css">
+</head>
+<body>
+   <!-- Effects -->
+   <div id="webmaker-fade-transition"></div>
+
+   <!-- Contact section -->
+   <div id="contact" class="full-view flex-center">
+      <div id="contact-container" class="full-size flex-center">
+         <div id="contact-transition"></div>
+         <img src="../images/logo.png" alt="logo" class="at-front">         
+         <div id="identity" class="at-front"><p><i class="fa-solid fa-chess-knight"></i>Created by Group02</p></div>
+
+         <!-- Phase: Choose contact -->
+         <div class="flex-column flex-center" id="contact-get-in-touch">
+            <i class="fa-solid fa-arrow-left contact-undo" id="contact-left"></i>
+            <h1 id="title">Get in touch</h1>
+            <p class="sub-title">please choose contact method we provide below.</p>
+            <button type="button" id="whatsapp" class="contact-center"><p><i class="fa-brands fa-whatsapp"></i>WhatsApp</p></button>            
+            <button type="button" id="email" class="contact-center"><p><i class="fa-regular fa-envelope"></i>Email</p></button>            
+         </div>
+
+         <!-- Phase: WhatsApp -->
+         <div class="flex-column flex-center" id="contact-whatsapp">
+            <i class="fa-solid fa-arrow-left contact-undo" id="contact-back"></i>
+            <h1 id="title"><i class="fa-brands fa-whatsapp"></i>WhatsApp</h1>
+            <p class="sub-title">you could contact us using phone number below.</p>
+            <h2 id="contact-area">+62 895 1300 5897</h2>    
+            <p class="sub-title-2">or else</p>      
+            <button type="button" id="contact-directly" into="WhatsApp" class="contact-center"><p><i class="fa-regular fa-paper-plane"></i>Contact directly</p></button>            
+         </div>
+
+         <!-- Phase: Email -->
+         <div class="flex-column flex-center" id="contact-email">
+            <i class="fa-solid fa-arrow-left contact-undo" id="contact-back"></i>
+            <h1 id="title"><i class="fa-regular fa-envelope"></i>Email</h1>
+            <p class="sub-title">you could contact us through email below.</p>
+            <h2 id="contact-area">ergarrios2003@gmail.com</h2>    
+            <p class="sub-title-2">or else</p>      
+            <button type="button" class="contact-center" id="contact-directly" into="Email" contact-center><p><i class="fa-regular fa-paper-plane"></i>Contact directly</p></button>            
+         </div>
+      </div>
+   </div>
+
+   <!-- Script -->
+   <script src="../js/script.js"></script>
+   <script src="../js/contact.js"></script>
+</body>
+</html>

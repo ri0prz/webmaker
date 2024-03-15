@@ -1,0 +1,203 @@
+#developer {
+   position: relative;
+   background: linear-gradient(white, rgb(222, 222, 222));   
+   gap: 60px;
+
+   padding: 20px 40px;
+   min-height: 100vh;
+   height: fit-content;
+}
+#developer .developer-container {
+   gap: 30px;
+}
+#developer .developer-img {  
+   position: relative; 
+   overflow: hidden;
+   cursor: help;
+   border-radius: 10px;
+   padding: 45px 20px;
+   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);            
+   transition: 1s ease;
+}
+#developer .developer-img:hover {
+   transition: 1s ease;           
+}
+#developer .developer-img img {
+   position: relative;
+   object-fit: contain;
+   transition: 1s ease;
+   animation: char-idle 1s infinite ease-in-out var(--delay);
+}
+@keyframes char-idle {
+   from, to {
+      rotate: x 0deg;
+   }
+   50% {
+      rotate: x 10deg;
+      transform: translateY(2px);
+   }
+}
+#developer .developer-img:hover img {
+   position: relative;
+   object-fit: contain;
+   transform: translateY(40px);
+   scale: 1.8;   
+   animation: none;
+   transition: 1s ease;
+}
+#developer .developer-img .developer-description {
+   position: absolute;
+   top: 0; left: 0;  
+   z-index: 1; 
+   width: 100%; height: 100%;
+   background-color: black;
+   opacity: 0;
+   padding: 30px 20px;
+
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   transition: 1s ease;
+}
+#developer .developer-img:hover .developer-description {
+   opacity: 0.8;
+   transition: 1s ease;
+}
+#developer .shadow {
+   position: absolute;
+   bottom: 52px;
+   width: 130px;
+   height: 20px;   
+   background-color: black;
+   opacity: 0.1;
+   border-radius: 40%;
+   transition: 1s ease;
+   animation: char-shadow 1s infinite ease-in-out var(--delay);
+}
+#developer:has(.developer-img:hover) .shadow {   
+   opacity: 0;
+   border-radius: 40%;
+   animation: none;   
+}
+@keyframes char-shadow {
+   from, to {
+      width: 130px; height: 20px;
+   }
+   50% {
+      width: 140px; height: 18px;
+      opacity: 0.2;
+   }
+}
+#developer .developer-description h1 .magic-text {
+   position: relative;
+   font-family: 'Inter', sans-serif;
+   font-size: 50px;   
+   width: fit-content;      
+   color: white;   
+}
+#developer .developer-description p {
+   position: relative;
+   margin: 4px 0;
+   font-size: 24px;
+   color: whitesmoke;
+}
+#developer .developer-description p.developer-trait {
+   font-size: 16px;   
+   color: wheat;
+}
+#developer #developer-logo {   
+   align-self: center;   
+   scale: 0.4;
+}
+#developer #developer-title {
+   font-family: 'Inter', sans-serif;  
+   color: rgb(92, 5, 92);
+   margin-top: -20px;
+   text-align: center;
+   font-size: clamp(56px, 1vw, 60px);
+}
+#developer #developer-subtitle {
+   align-self: center;
+   font-family: 'Inter', sans-serif;
+   width: 80%;
+   text-align: center;
+   font-size: clamp(28px, 1vw, 32px);
+   font-weight: 300;
+   margin-bottom: 30px;
+}
+nav {
+   position: absolute;     
+}
+nav #developer-logo-2 {
+   position: relative;
+   width: 180px;
+}
+@media (width < 910px) {
+   /* * {background-color: violet;} */
+   nav {
+      position: fixed;
+      top: 0; left: 0;
+      opacity: 1;
+
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+       
+      background-color: white;
+      width: 100%;
+      height: fit-content;
+      padding: 20px 40px;
+      z-index: 1;
+   }
+   nav #developer-left {
+      position: relative;
+      font-size: 40px;
+   }
+   #developer-logo {
+      opacity: 0;
+   }
+}
+@media (width > 910px) {
+   #developer #developer-left {
+      position: absolute;
+      top: 0; 
+      margin: 50px auto;      
+      font-size: 40px;
+   }
+   nav #developer-logo-2 {
+      opacity: 0;
+   }
+}
+
+#developer .developer-img:nth-child(1) {
+   background: linear-gradient(to bottom, lightskyblue, rgb(60, 53, 163));      
+}
+#developer .developer-img:nth-child(2) {
+   background: linear-gradient(lightgreen, rgb(18, 139, 42));
+}
+#developer .developer-img:nth-child(3) {
+   background: linear-gradient(lightcoral, rgb(127, 25, 25));
+}
+#developer .developer-img:nth-child(1):hover {
+   box-shadow: 10px 10px 0 blue;
+   transform: translate(-12px, -12px);
+}
+#developer .developer-img:nth-child(2):hover {
+   box-shadow: 10px 10px 0 green;
+   transform: translate(-12px, -12px);
+}
+#developer .developer-img:nth-child(3):hover {
+   box-shadow: 10px 10px 0 red;
+   transform: translate(-12px, -12px);
+}
+
+#developer .fa-arrow-left {
+   cursor: pointer;   
+}
+#developer .fa-arrow-left:hover {
+   animation: grow-ease .5s ease-in-out;
+}
+@keyframes grow-ease {
+   from, to { scale: 1; rotate: x 0deg; }
+   50% { scale: 1.2; rotate: x 45deg; }
+}

@@ -1,0 +1,379 @@
+#request {
+   position: relative;
+}
+
+.purple-1 {
+   --bg-color: rgb(142, 0, 135);
+}
+.purple-2 {
+   --bg-color: rgb(125, 0, 142);
+}
+
+#request .request-container {   
+   position: relative;
+   width: 60%;
+   height: 600px;
+   box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+   overflow: hidden;
+   border-radius: 40px;      
+}
+
+/* Left Container */
+#request .request-container .request-left {
+   position: relative;
+   width: 50%;
+   background-color: whitesmoke;   
+}
+#request .has-padding {
+   padding: 12px 20px;
+}
+#request .request-container .request-left h1 {
+   font-family: 'Inter', sans-serif;   
+   text-align: center;
+   font-weight: 700;
+   font-size: 36px;
+   margin-bottom: 8px;
+}
+#request .request-container .request-left form {
+   width: 90%;   
+   margin: 22px auto;
+   height: 250px;
+   /* background-color: firebrick; */
+}
+#request .request-container .request-left form label {
+   position: relative;
+   color: gray;
+   margin: 4px 0;
+   font-size: 18px;
+}
+#request .request-container .request-left form label i {
+   position: absolute;
+   cursor: pointer;
+   bottom: 50%; transform: translateY(50%);
+   right: 0;
+}
+#request .request-container .request-left form input {
+   margin-bottom: 32px;
+   font-size: 24px;
+   outline: none;
+   height: 5vh;
+   background-color: transparent;
+   border: transparent;
+   border-bottom: 2px solid black;
+}
+#request .request-container .request-left form button {
+   padding: 12px;
+   font-family: 'Inter';    
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   border: none;
+   background-color: var(--bg-color);
+   border-radius: 40px;
+   color: white;
+   font-size: 24px;
+   transition: .5s ease;
+}
+#request .request-container .request-left form button:hover {
+   background-color: #420964;
+   transition: .5s ease;
+}
+#request .request-left #request-interface #request-interface-logout {
+   padding: 12px 12px;
+   margin-top: 8px;
+   border: 4px solid rgb(127, 5, 127);
+   border-radius: 40px;
+   color: rgb(127, 5, 127);   
+   width: 70%;
+   font-size: 20px;
+   transition: .5s ease;
+}
+#request .request-left #request-interface #request-interface-logout:hover {
+   letter-spacing: 1px;
+   border: 4px solid rgb(63, 3, 63);
+   color: rgb(63, 3, 63);
+   width: 75%;
+   transition: .5s ease;
+}
+#request .request-left #request-interface #request-interface-logout i {
+   margin-right: 8px;
+}
+#request .request-left #request-interface #request-interface-history {
+   padding: 12px 12px;
+   margin-top: 8px;
+   border: none;
+   border-radius: 40px;
+   background-color: rgb(127, 5, 127);
+   color: whitesmoke;
+   width: 70%;
+   font-size: 20px;
+   transition: .5s ease;
+}
+#request .request-left #request-interface #request-interface-history:hover {
+   letter-spacing: 1px;
+   background-color: rgb(63, 3, 63);
+   width: 75%;
+   transition: .5s ease;
+}
+#request .request-left #request-interface #request-interface-history i {
+   margin-right: 8px;
+}
+#request .request-left #request-left {
+   position: absolute;
+   cursor: pointer;
+   font-size: 30px;
+   margin: 30px 30px;
+   top: 0; left: 0;   
+   padding: 12px 12px;
+   z-index: 5;
+   /* background-color: firebrick; */
+}
+#request .request-left #request-left:hover {
+   animation: grow-ease .4s ease-in-out;
+}
+@keyframes grow-ease {
+   from, to { scale: 1; rotate: x 0deg; }
+   50% { scale: 1.2; rotate: x 45deg; }
+}
+
+/* Right Container */
+#request .request-container .request-right {
+   overflow: hidden;
+   width: 60%;
+   position: relative;
+}
+#request .request-right .request-interface-container {         
+   height: 90%;   
+   margin: 30px 30px;   
+   /* background-color: lavenderblush; */
+}
+#request .request-right .request-interface-container form {
+   /* background-color: firebrick;    */
+   overflow-y: scroll;
+   height: 100%;
+   padding: 20px 0px;
+   padding-right: 40px;
+}
+#request .request-right .request-interface-container form::-webkit-scrollbar-thumb {
+   background-color: #250537;
+   border-radius: 80px; 
+}
+#request .request-right .request-interface-container form::-webkit-scrollbar-track {
+   border-radius: 80px; 
+}
+#request .request-right .request-interface-container form textarea {
+   resize: none;   
+   width: 100%;
+   height: 400px;
+}
+#request .request-right .request-interface-container form label {
+   color: gray;
+   display: block;
+   margin-bottom: -15px;
+   /* background-color: firebrick;    */
+}
+#request .request-right .request-interface-container form textarea {
+   outline: none;
+   font-size: 16px;
+   padding: 10px 10px;
+   margin-top: 12px;   
+}
+#request .request-right .request-interface-container form button {   
+   font-family: 'Inter';
+   border: none;
+   background: #7d00a3;
+   border-radius: 12px;
+   margin-top: 20px;
+   color: aliceblue;
+   width: 100%;
+   padding: 20px 0;
+   font-size: 24px;
+   transition: .4s ease-in-out;
+}
+#request .request-right .request-interface-container form button:hover {   
+   background-color: #420964;
+   letter-spacing: 1px;
+   transition: .4s ease-in-out;
+}
+#request .request-right .request-interface-container form button i {
+   margin-right: 6px;
+}
+#request .request-right .request-interface-container form textarea {
+   border-radius: 10px;
+}
+#request .request-right .request-interface-container form input,
+#request .request-right .request-interface-container form select {
+   padding: 10px 0px;
+   margin-bottom: 30px;
+   font-size: 20px;
+   height: 50px;
+   outline: none;   
+   border: none;
+   /* background-color: firebrick; */
+   border-bottom: 2px solid black;
+   width: 100%;
+}
+#request .request-right .request-interface-container h1 {
+   font-family: 'Inter';
+   font-size: 30px;
+   color: rgb(44, 3, 40);
+}
+#request .request-right .request-interface-container p {
+   margin: 8px auto;
+   color: rgb(39, 39, 39);
+   font-size: 20px;
+   line-height: 1.4;
+   font-family: 'Inter';
+}
+#request .request-container .request-right img {      
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   filter: brightness(50%);
+   animation: request-img-scale 2s ease-in-out infinite;
+}
+@keyframes request-img-scale {
+   50% { scale: 1.01; }
+}
+#request .request-container .request-right #request__description {
+   position: absolute;
+   height: 500px;
+   background: linear-gradient(transparent, black);
+   bottom: 0;
+
+   display: flex;
+   align-items: flex-end;
+   padding: 40px 40px;
+}
+#request .request-container .request-right #request__description p {   
+   color: whitesmoke;
+   position: relative;
+   font-size: 24px;
+}
+
+#request #request-logo {   
+   position: absolute;
+   top: 0; left: 0;  
+   margin-top: 40px;
+   width: 100%;
+   display: flex;    
+   justify-content: center;
+}
+#request #request-logo img {   
+   width: 36%;
+}
+#request #identity {
+   position: absolute;
+   bottom: 0; left: 0;  
+   text-align: center;
+   width: 100%;
+   margin-bottom: 40px;
+}
+#request #identity p {   
+   font-size: 16px;
+}
+#request #identity p i {
+   margin-right: 4px;
+}
+#request #request__register__direct {
+   cursor: pointer;
+   align-self: center;
+   width: fit-content;
+   font-size: 16px;
+   color: rgb(193, 193, 193);
+   margin-top: 20px;
+   text-align: center;
+   transition: .4s ease;
+}
+#request #request__register__direct:hover {
+   color: gray;
+   transition: .4s ease;
+}
+
+#request .required {
+   color: rgb(46, 3, 46);
+}
+
+#request #request-login input {
+   padding: 10px 0;
+}
+
+#request #request-register,
+#request #request-register-display {
+   display: block;
+   display: none;
+}
+#request #request-login,
+#request #request-login-display {
+   display: block;
+   display: none;
+}
+#request #request-interface,
+#request #request-interface-display {
+   display: flex;
+   /* display: none; */
+}
+
+#request .request-container .request-right #request__mini__navbar {
+   /* background-color: firebrick; */   
+   display: none;
+}
+#request .request-container .request-right #request__mini__navbar img {
+   width: 30%;   
+   animation: none;
+   /* scale: 0.4; */
+   filter: none;
+   object-fit: contain;
+   /* background-color: darkblue; */
+}
+#request .request-container .request-right #request__mini__navbar p {
+   width: 100%;
+}
+#request .request-container .request-right #request__mini__navbar p span {
+   margin: 0 clamp(6px, 2vw, 12px);
+}
+
+/* Responsive */
+@media (width < 1080px) {
+   #request .request-container {           
+      min-width: 340px; 
+      transition: 0.3s ease; 
+   }
+
+   /*Right container*/
+   #request .request-container .request-right.ds-flex {       
+      display: flex;
+      width: 100%;
+   }
+   #request .request-container .request-right.ds-none {
+      display: none;
+   }
+   #request .request-container .request-right #request__mini__navbar {
+      width: 100%;
+      height: 40px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row-reverse;
+   }
+   #request .request-container .request-right #request__mini__navbar p {
+      color: rgb(163, 163, 163);
+      font-size: clamp(16px, 2vw, 26px);
+   }
+   #request .request-container .request-right #request__mini__navbar i {      
+      color: black;
+      cursor: pointer;      
+   }
+   #request .request-container .request-right #request__mini__navbar i:hover {
+      animation: grow-ease .4s ease-in-out;
+   }
+
+   /*Left container*/   
+   #request .request-container .request-left.ds-flex {
+      display: flex;
+      width: 100%;
+   }
+   #request .request-container .request-left.ds-none {
+      display: none;
+   }
+}

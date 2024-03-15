@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Do Request</title>
+
+   <!-- Stylesheets -->
+   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="../css/style.css">
+   <link rel="stylesheet" href="../css/request.css">
+</head>
+<body>
+   <!-- Transition -->
+   <div id="webmaker-fade-transition"></div>   
+
+   <div class="full-view flex-center" id="request">
+      <div class="request-container flex">
+
+         <!-- ================================== Left ================================== -->
+         <div class="request-left flex-center ds-flex">
+            <!-- Register -->
+            <div class="flex-center flex-column has-padding" id="request-register">
+               <i class="fa-solid fa-arrow-left" id="request-left"></i>
+               <div id="request-logo">
+                  <img src="../images/logo.png" alt="logo">
+               </div>
+               <div id="identity" class="at-front"><p><i class="fa-solid fa-chess-knight"></i>Created by Group02</p></div>
+
+               <h1>Do Register</h1>               
+
+               <form action="#" class="flex-column">
+                  <label for="request__name">username</label>
+                  <input type="text" spellcheck="false" id="request__name" autocomplete="off" required>
+                  <label for="request__password">password<i class="fa-solid fa-eye"></i></label>
+                  <input type="password" spellcheck="false" id="request__password" required>
+                  <button class="purple-1" id="request__register__btn">Register</button>
+               </form>
+            </div>
+
+            <!-- Login -->
+            <div class="flex-center flex-column has-padding" id="request-login">
+               <i class="fa-solid fa-arrow-left back" id="request-left"></i>
+               <div id="request-logo">
+                  <img src="../images/logo.png" alt="logo">
+               </div>
+               <div id="identity" class="at-front"><p><i class="fa-solid fa-chess-knight"></i>Created by Group02</p></div>
+
+               <h1>Do Login</h1>               
+               <form action="#" class="flex-column">
+                  <label for="request__name__login">username</label>
+                  <input type="text" spellcheck="false" id="request__name__login" autocomplete="off" required>
+                  <label for="request__password__login">password<i class="fa-solid fa-eye"></i></label>
+                  <input type="password" spellcheck="false" id="request__password__login" required>
+                  <button class="purple-2" id="request__login__btn">Login</button>
+                  <p id="request__register__direct">have no account?</p>
+               </form>
+            </div>
+
+            <!-- Request -->
+            <div class="flex-center flex-column has-padding" id="request-interface">               
+               <div id="request-logo">
+                  <img src="../images/logo.png" alt="logo">
+               </div>
+               <div id="identity" class="at-front"><p><i class="fa-solid fa-chess-knight"></i>Created by Group02</p></div>
+
+               <div class="flex-center flex-column">
+                  <h1>Welcome,<br>Humanouid</h1>                     
+                  <button id="request-interface-history"><i class="fa-solid fa-clock-rotate-left"></i>History</button>      
+                  <button id="request-interface-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</button>                    
+               </div>      
+            </div>
+         </div>
+
+         <!-- ================================== Right ================================== -->
+         <div class="request-right ds-none">
+            <!-- Register -->
+            <div class="full-size" id="request-register-display">
+               <img src="../images/request-image.png" alt="img">
+               <div id="request__description">
+                  <p>create your account to start request our services 😉</p>
+               </div>
+            </div>
+
+            <!-- Login -->
+            <div class="full-size" id="request-login-display">
+               <img src="../images/request-image-2.png" alt="img">
+               <div id="request__description">
+                  <p>authenticate your account to start request our services 😄</p>
+               </div>
+            </div>
+
+            <!-- Interface -->
+            <div class="full-size flex-center" id="request-interface-display">
+               <div class="full-size request-interface-container flex-column">
+                  <div id="request__mini__navbar">
+                     <img src="../images/logo-2.png" alt="">
+                     <div class="flex-center">
+                        <p><i class="fa-solid fa-arrow-right-from-bracket" id="request__interface__logout__mini"></i><span>•</span>from. Humanouid</p>
+                     </div>
+                  </div>
+                  <h1>User Request</h1>
+                  <p>please fill this form below to process your own web develop requirement.</p>
+                  <form action="#">
+                     <label for="request__web__email">email<span class="required">*</span></label><br>
+                     <input type="email" id="request__web__email" spellcheck="false" placeholder="me@example.com" required><br>                     
+                     <label for="request__web__name">webname<span class="required">*</span></label><br>
+                     <input type="text" id="request__web__name" spellcheck="false" placeholder="myWebName" required><br>                     
+                     <label for="request__web__style">style</label><br>
+                     <select id="request__web__style">
+                        <option value="1">Minimalist ✨</option>
+                        <option value="2">Structured</option>
+                        <option value="3">Modern</option>
+                        <option value="4">Other</option>
+                     </select><br>                  
+                     <label for="request__web__dateline" required>dateline<span class="required">*</span></label><br>
+                     <input type="date" id="request__web__dateline"><br>
+                     <label for="request__web__description">description</label><br>
+                     <textarea id="request__web__description" spellcheck="false"></textarea>
+                     <button type="submit"><i class="fa-solid fa-envelopes-bulk"></i>Request</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Scripts -->
+   <script src="../js/script.js"></script>
+   <script src="../js/request.js"></script>
+</body>
+</html>

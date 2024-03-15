@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+   <title>Webmaker</title>
+
+   <!-- Stylesheets -->
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/index.css">   
+</head>
+
+<body>   
+   <!-- Effects -->
+   <div id="webmaker-transition">
+      <img src="images/logo.png" alt="logo">      
+   </div>
+   <div id="webmaker-fade-transition"></div>
+
+   <!-- Navbar -->
+   <nav class="flex-center-around">
+      <div class="left-nav">
+         <img src="images/logo.png" alt="webmaker-logo" id="logo">
+      </div>
+
+      <i class="fa-solid fa-bars" id="nav-bar"></i>
+
+      <div class="right-nav">
+         <a class="clicked-list slider nav-home" id="nav-home">Home</a>
+         <a class="default-list slider nav-demos" id="nav-demos">Demos</a>      
+         <a class="default-list slider nav-feature" id="nav-feature">Feature</a>
+         <a class="nav-request">Request<i class="fa-solid fa-plus"></i></a>
+         <i class="fa-solid fa-xmark" id="nav-bar-out"></i>
+      </div>
+   </nav>
+
+   <!-- Home section -->
+   <section id="home" class="full-view flex-center" anchor="nav-home">      
+      <img src="images/home-deco.png" id="home-deco">      
+      <div class="flex-column flex-center">
+         <p class="home-p">
+            We design <span class="magic-effect" magic-icon="<i class='fa-regular fa-star'></i>">
+            <span class="magic-text magic-blue">cool</span></span> website for you.
+         </p>
+         <button type="button" id="home-button">
+            <p>get started</p>
+            <div class="load-effect"></div>
+         </button>
+      </div>      
+   </section>
+
+   <!-- About section -->
+   <section id="about" class="full-view flex-center" anchor="nav-home">
+      <img src="images/about-deco.png" id="about-deco">
+      <div class="flex-column" id="about-anchor" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
+         <h1>introduce us.</h1>
+         <p>
+            webmaker known as stylist website development <br>
+            provider for your <span class="magic-effect" magic-icon="<i class='fa-regular fa-star'></i>"><span
+            class="magic-text">inovative</span></span> company.
+         </p>
+         <button type="button" id="about-button">
+            <p>see more</p>
+            <div class="load-effect"></div>
+         </button>
+      </div>      
+   </section>
+
+   <!-- Demos section -->
+   <section id="demos" class="responsive full-view flex-center" anchor="nav-demos">
+      <!-- <div id="demos-effect"></div> -->      
+      <div class="flex-center full-size flex-wrap" id="demo-image-container" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="800">
+
+         <!-- Left -->
+         <div class="demo-image-slider flex">
+            <div id="demo-slider-button">
+               <div id="demo-grow-effect"></div>
+               <button type="button" id="demos-button" class="demos-slider-button">
+                  <i class="fa-solid fa-play"></i>
+                  <div class="load-effect"></div>
+               </button>
+            </div>
+            <div class="demo-image-container flex-center" data-aos="flip-right" data-aos-delay="300" data-aos-duration="800">
+               <img class="demo-image" src="images/web-neat.png" alt="demo-image">
+               <img class="demo-image" src="images/web-modern.png" alt="demo-image">
+               <img class="demo-image" src="images/web-minimalist.png" alt="demo-image">
+            </div>
+            
+            <div id="demo-image-description">
+               <h1>
+                  <span class="magic-effect" magic-icon="<i class='fa-regular fa-star'></i>">                     
+                     <span class="magic-text" id="demo-image-description-title">minimalist</span>
+                  </span>
+               </h1>
+               <p id="demo-image-description-desc">simple design that brings full scenery of quality.</p>
+            </div>
+         </div>
+
+         <!-- Right -->
+         <div class="flex-column flex-center" id="demo-description-container">
+            <p class="demo-p">
+               looking for<br>
+               <span class="magic-effect" magic-icon="<i class='fa-regular fa-star'></i>">
+                  <span id="demo-description-box"></span>
+                  <span class="magic-text" id="demo-description">minimalist</span>
+               </span> kind?
+            </p>
+            <button type="button" id="demos-button" class="demos-next-button">
+               <p>next</p>
+               <div class="load-effect"></div>
+            </button>
+         </div>
+      </div>
+   </section>
+
+   <!-- Feature section -->
+   <section id="feature" class="responsive full-view flex-center" anchor="nav-feature">
+      <div id="feature-effect"></div>
+      <div class="flex-center flex-wrap-reverse" id="feature-anchor">
+         <div class="flex-column">
+            <p>
+               why so hesitate?<br>
+               it's
+               <span class="magic-effect" magic-icon="<i class='fa-regular fa-star'></i>">
+                  <span id="feature-description-box"></span>
+                  <span class="magic-text" id="feature-description">simple</span>
+               </span>.
+            </p>
+            <button type="button" id="feature-button">
+               <p>contact us</p>
+               <div class="load-effect"></div>
+            </button>
+         </div>
+         <div class="magic-effect" magic-icon="<i class='fa-solid fa-star-of-david'></i>" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="800">
+            <img src="images/feature-simple.png" alt="about-image" id="feature-image" class="image-effect">
+         </div>
+      </div>      
+   </section>
+   
+   <!-- Footer -->
+   <footer>
+      <div class="flex flex-wrap id="footer-content">
+         <div class="flex-center">
+            <h1>Webmaker.</h1>
+         </div>
+         <div class="flex">
+            <div class="flex-column" id="footer-address">
+               <p class="not-clickable"><i class="fa-solid fa-map-location-dot"></i>Durian Runtuh St. 291FG</p>
+               <p class="not-clickable"><i class="fa-brands fa-instagram"></i>@webmakernotexist</p>
+               <p class="not-clickable"><i class="fa-brands fa-facebook"></i>webmakergroup2</p>
+            </div>
+            <div class="flex-column" id="footer-address">
+               <p class="clickable" id="developer-button"><i class="fa-solid fa-screwdriver-wrench"></i>Check Developers</p>
+               <p class="not-clickable"><i class="fa-regular fa-copyright"></i>Group02</p>
+               <p class="invisible"><i class="fa-brands fa-facebook"></i>webmakergroup2</p>
+            </div>
+         </div>
+      </div>
+      <div class="footer-background">         
+         <img src="images/background-feature.png" alt="feature-bg">
+      </div>
+   </footer>
+
+   <!-- Script(s) -->
+   <script src="js/script.js"></script>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script> AOS.init(); </script>
+   <script src="js/index.js"></script>
+</body>
+
+</html>
